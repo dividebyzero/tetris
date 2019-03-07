@@ -10,6 +10,8 @@ Blocs for Flutter made easy
   Feel at Home
  ### __Flexibility__
   Be usefull everywhere, even in now-unknown places
+ ### __Chaining__
+  > Yo dawg, I heard you like Blocs, so I put some Blocs in your Blocs, so now you can play Tetris while playing Tetris
   
  ##   API
 
