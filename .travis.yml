@@ -12,11 +12,14 @@ addons:
     packages:
       - libstdc++6
       - fonts-droid
+
+install:
+  - echo 'Avoid default Travis CI install step' 
+
 before_script:
   - git clone https://github.com/flutter/flutter.git -b master
   - ./flutter/bin/flutter doctor
 script:
+  - ./flutter/bin/flutter packages get
   - ./flutter/bin/flutter test
-cache:
-  directories:
-    - $HOME/.pub-cache
+
