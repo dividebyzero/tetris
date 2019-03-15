@@ -4,18 +4,32 @@ import 'package:tetris_blocs/core/tetris_builder.dart';
 
 import 'package:tetris_blocs/tetris_blocs.dart';
 
-import 'tetris_bloc_test.dart';
+class EchoBloc extends TetrisBloc {
+
+  String prefix ="";
+
+  EchoBloc();
+
+  EchoBloc.withPrefix({this.prefix});
+
+  @override
+  Stream<TetrisEvent> processEvent(TetrisEvent event) async*{
+    event.type =  (this.prefix != null ? this.prefix + "echo" : "echo");
+    yield event;
+  }
+}
+
+class SimpleTest extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var bloc  = TetrisProvider.of<EchoBloc>(context);
+    assert(bloc!=null);
+    return Text("ok");
+  }
+
+}
 
 void main() {
-  /*
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
-  });
-  */
 
 
   testWidgets("BlocBuilderForwardsEvents", (WidgetTester tester) async {
