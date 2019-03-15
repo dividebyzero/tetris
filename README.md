@@ -1,4 +1,4 @@
-# core
+# Tetris
 Blocs for Flutter made easy
 
 
@@ -13,6 +13,11 @@ Blocs for Flutter made easy
  ### __Chaining__
   > Yo dawg, I heard you like Blocs, so I put some Blocs in your Blocs, so now you can play Tetris while playing Tetris
   
+ ##  ToDo
+ - [] API documentation
+ - [] chaining
+ - [] example project
+ 
  ##   API
 
 TetrisEvent(action, payload)
