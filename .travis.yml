@@ -18,6 +18,4 @@ before_script:
 script:
   - ./flutter/bin/flutter packages get
   - ./flutter/bin/flutter test
-cache:
-  directories:
-    - $HOME/.pub-cache
+
