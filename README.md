@@ -35,7 +35,7 @@ TetrisBuilder.WithFilter
  And the full implementation of the Bloc is this:
  ```
  class MyTetrisBloc extends TetrisBloc {
-    Observable<TetrisEvent> processEvent(TetrisEvent event) async* {
+    Stream<TetrisEvent> processEvent(TetrisEvent event) async* {
       yield TetrisEvent.withPayload("loadList",[1,3,5,7]);
     }
 }

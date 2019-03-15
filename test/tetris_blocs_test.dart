@@ -51,4 +51,24 @@ void main() {
 
 
   });
+
+
+  testWidgets("Provider gives right bloc", (WidgetTester tester)async {
+    var myBloc  = EchoBloc();
+
+    var providerToTest = TetrisProvider(
+        child: MaterialApp(
+          home: Scaffold(
+            body: SimpleTest()
+          )
+        ),
+        blocs: [myBloc]
+    );
+
+    await tester.pumpWidget(providerToTest);
+    final finder = find.text("ok");
+    expect(finder, findsWidgets);
+  });
+
+
 }
