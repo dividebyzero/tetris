@@ -1,4 +1,4 @@
-# core
+# Tetris
 Blocs for Flutter made easy
 
 
