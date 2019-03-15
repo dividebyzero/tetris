@@ -23,7 +23,7 @@ abstract class TetrisBloc {
   }
 
 
-  Observable<TetrisEvent> processEvent(TetrisEvent event);
+  Stream<TetrisEvent> processEvent(TetrisEvent event);
 
 
 
