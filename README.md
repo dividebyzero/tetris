@@ -1,6 +1,7 @@
 # Tetris
 Blocs for Flutter made easy
 
+[![Build Status](https://travis-ci.com/dividebyzero/tetris.svg?branch=master)](https://travis-ci.com/dividebyzero/tetris)
 
 
 ## Goals
