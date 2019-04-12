@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [1.0.0] - 12. April 2019
 
-* TODO: Describe initial release.
+* Initial Release provides all base funtionality of BLoCs

@@ -1,8 +1,8 @@
 name: tetris_blocs
 description: Blocs for Flutter made easy.
 version: 0.0.1
-author: Ronan 'Zero' Schwarz
-homepage: github.com/dividebyzero
+author: Ronan 'Zero' Schwarz <zero@axitera.de>
+homepage: https://github.com/dividebyzero/tetris
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"

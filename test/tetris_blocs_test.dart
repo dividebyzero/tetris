@@ -67,6 +67,45 @@ void main() {
   });
 
 
+  testWidgets("BlocBuilderFiltersEvents", (WidgetTester tester) async {
+
+    var myBloc = EchoBloc();
+
+    var builderToTest = TetrisBuilder.withFilter(
+      blocs: [myBloc],
+      builder: (BuildContext context, TetrisEvent event) {
+        if(event!=null && event.action != null ) {
+          print("action="+event.action);
+          return MaterialApp(
+              home: Scaffold(
+                  body: Text(event.action)
+              ));
+        }else {
+          print("no action");
+          return MaterialApp(
+              home: Container()
+          );
+        }
+      },
+      filter: (TetrisEvent event){
+        return event.action == "accept";
+      },
+    );
+
+    await tester.pumpWidget(builderToTest);
+
+    myBloc.dispatch(TetrisEvent.withAction(action:"accept"));
+    await tester.pumpAndSettle();
+    myBloc.dispatch(TetrisEvent.withAction(action:"discard"));
+    await tester.pumpAndSettle();
+
+    final finder = find.text("accept");
+    expect(finder, findsWidgets);
+
+
+
+  });
+
   testWidgets("Provider gives right bloc", (WidgetTester tester)async {
     var myBloc  = EchoBloc();
 
