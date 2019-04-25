@@ -1,24 +1,22 @@
-
-
 import 'package:flutter/widgets.dart';
 import 'package:tetris_blocs/core/tetris_bloc.dart';
 
-class TetrisProvider extends InheritedWidget{
-
+class TetrisProvider extends InheritedWidget {
   final ObjectKey key = new ObjectKey(TetrisProvider);
   final Widget child;
   final List<TetrisBloc> blocs;
 
-  TetrisProvider({@required this.child, @required this.blocs}):
-    assert(child!=null),
-    assert(blocs != null),
-    super(key:new ObjectKey(TetrisProvider));
-
+  TetrisProvider({@required this.child, @required this.blocs})
+      : assert(child != null),
+        assert(blocs != null),
+        super(key: new ObjectKey(TetrisProvider));
 
   static T of<T extends TetrisBloc>(BuildContext context) {
-    TetrisProvider provider = context.ancestorInheritedElementForWidgetOfExactType(TetrisProvider).widget;
+    TetrisProvider provider = context
+        .ancestorInheritedElementForWidgetOfExactType(TetrisProvider)
+        .widget;
 
-    if(provider == null){
+    if (provider == null) {
       throw FlutterError(
         """
         TetrisProvider.of() called with a context that does not contain TetrisProvider.
@@ -35,5 +33,4 @@ class TetrisProvider extends InheritedWidget{
 
   @override
   bool updateShouldNotify(InheritedWidget oldWidget) => false;
-
 }

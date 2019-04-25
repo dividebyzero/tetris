@@ -30,7 +30,7 @@ class TetrisEvent {
     this.type = TetrisEventTypes.OTHER;
   }
 
-  TetrisEvent.Empty(){
+  TetrisEvent.empty(){
     this.type = TetrisEventTypes.EMPTY;
   }
 

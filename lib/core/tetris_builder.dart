@@ -64,7 +64,7 @@ class _TetrisBuilderCoreState extends State<TetrisBuilderCore> {
   StreamSubscription  _subscription;
 
   @override void initState() {
-    _event = TetrisEvent.Empty();
+    _event = TetrisEvent.empty();
     subscribeToEvents();
     super.initState();
   }
