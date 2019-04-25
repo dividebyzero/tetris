@@ -1,6 +1,6 @@
 name: tetris_blocs
-description: Blocs for Flutter made easy.
-version: 0.0.1
+description: Blocs for Flutter made easy. A light-weight, flexible, event-based implementation of the BLoC Pattern.
+version: 1.0.0
 author: Ronan 'Zero' Schwarz <zero@axitera.de>
 homepage: https://github.com/dividebyzero/tetris
 
